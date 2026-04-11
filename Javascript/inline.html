@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="document.body.style.backgroundColor='lightblue'">
+    <h2 onclick="console.log('hello')">This is first line</h2>
+    <h1 onclick="alert('clicked')">for alert</h1>
+    <h3 onclick="this.style.backgroundColor='pink'">for style</h3>
+    <form onsubmit="alert('form submitted')">
+        <label for="">Name</label>
+        <input type="text" onchange="alert('text changed')">
+        <br><br>
+        <label for="">email</label>
+        <input type="email" onmouseover="this.style.backgroundColor='yellow'" onmouseout="this.style.backgroundColor='pink'"><br><br>
+        <label for="">age</label>
+        <input type="number" onfocus="this.style.backgroundColor='blue'" onblur="this.style.backgroundColor='grey'">
+        <input type="submit">
+    </form>
+</body>
+</html>

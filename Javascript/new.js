@@ -32,4 +32,4 @@
 greet()
 function greet(){
     console.log("welcome")
-}wq
+}

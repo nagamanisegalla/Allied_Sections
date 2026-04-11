@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="new"><span style="display: none;">Hey,</span>We started dom selections</h1>
+    <p class="para">It is Dom Class</p>
+    <p class="para">it is second p</p>
+    <img src="" alt="extra" id="im">
+    <script>
+        let image = document.getElementById("im")
+        image.alt = "extra456789"
+        image.remove()
+        let heading = document.getElementById("new")
+        heading.innerHTML = "new"
+        document.getElementById("new").style.backgroundColor= "pink"
+        console.log(heading.innerHTML)
+        console.log(heading.innerText)
+        console.log(heading.textContent)
+        let new2 = document.getElementsByClassName("para")
+        new2[0].innerHTML = "change it"
+        let new3 = document.createElement("q")
+        new3.innerHTML = "it is newly created h1 tag"
+        let new4 = document.createElement("h1")
+        new4.innerHTML = "h1 tag"
+        document.body.appendChild(new3)
+        document.body.append(new3,new4)
+        let new5 = document.getElementsByTagName("p")
+        new5[0].style.backgroundColor = "yellow"
+        new5[1].style.backgroundColor = "yellow"
+
+        let new6 = document.querySelector(".para")
+        new6.innerHTML = "id content"
+
+        let new7 = document.querySelectorAll(".para")
+        new7.forEach(function(i){
+            i.style.color = "red"
+        })
+
+
+    </script>
+</body>
+</html>

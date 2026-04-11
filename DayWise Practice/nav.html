@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="nav.css">
+</head>
+<body>
+    <ul type="none">
+        <li><a href="#login">Login</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#table">Table</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div id="login">
+        <form>
+        <fieldset>
+            <legend>User Information</legend>
+        <label>UserName:</label>
+        <input type="text" name="name" placeholder="enter your fullname">
+        <br><br>
+        <label>Password</label>
+        <input type="password" >
+        <br><br>
+        <label>Email</label>
+        <input type="email" required name="email"> 
+        <br><br>
+        </fieldset>
+        <label>Age</label>
+        <input type="number" min="1" max="100">
+        <br><br>
+        <label>DOB</label>
+        <input type="date" >
+        <br><br>
+        <label>Upload File</label>
+        <input type="file" >
+        <br><br>
+        <label>Favourite Color:</label>
+        <input type="color" >
+        <br><br>
+        <label>HTML Skill</label>
+        <input type="range" >
+        <br><br>
+        <label>Telephone</label>
+        <input type="tel" >
+        <br><br>
+        <label>Bio</label>
+        <textarea name="bio" rows="8" cols="8"></textarea>
+        <br><br><br>
+        <label>Gender</label>
+        <input type="radio" name="gender" value="Male"> Male
+        <input type="radio" name="gender" value="female"> Female
+        <br><br>
+        <label>Skills</label>
+        <input type="checkbox" name="skills" value="HTML"> HTML
+        <input type="checkbox" name="skills" value="CSS"> CSS
+        <br><br>
+        <label>College</label>
+        <select name="college">
+            <option value="">---select option--</option>
+            <option value="Vemu">Vemu</option>
+            <option value="XYZ">XYZ</option>
+        </select>
+        <button type="submit">Submit</button>
+        <input type="submit">
+        <input type="reset">
+        <input type="button" value="Clear">
+    </form>
+    </div>
+
+    <div id="about">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid cumque iste commodi vero, corporis fugiat, odio, optio minus aut placeat officiis assumenda? Reprehenderit reiciendis autem eum dicta cum totam soluta!</p>
+        <h1>Contact de6tails</h1>
+        <h2>About me</h2>
+    </div>
+
+    <div id="table">
+        <table>
+        <caption>Student Details</caption>
+        <tr>
+            <th colspan="2">Name</th>
+            <th>Branch</th>
+        </tr>
+        <tr>
+            <td>Chinna</td>
+            <td>1</td>
+            <td rowspan="2">ABC</td>
+        </tr>
+        <tr>
+            <td>Kumar</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>Bhargavi</td>
+            <td>3</td>
+            <td>KLM</td>
+        </tr>
+    </table>
+    </div>
+
+    <div id="contact">
+        <h4>CONTACT ME</h4>
+        <p>Email</p>
+        <i>Addtres</i>
+    </div>
+</body>
+</html>

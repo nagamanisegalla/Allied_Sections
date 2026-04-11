@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let obj = {
+            name: "chinna",
+            roll: "B3",
+            branch : "AIML-B",
+            marks : [12,15,20],
+            isStudent : true,
+            number : 24,
+            skills: {
+                html : "good",
+                css : "best",
+                js : "medium"
+            },
+            key : "new"
+        }
+        console.log(obj["roll"])
+        console.log(obj.name)
+        console.log(obj)
+        console.log(Object.keys(obj))
+        console.log(Object.values(obj))
+        console.log(Object.entries(obj))
+        console.log(obj.skills.html)
+        console.log(obj.marks[4])
+        delete obj.name
+        console.log(obj)
+        for(let key in obj){
+            console.log(key,":",obj.key)
+        }
+    </script>
+</body>
+</html>

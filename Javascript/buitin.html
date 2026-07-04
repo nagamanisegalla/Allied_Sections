@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [1,2,3,1.5,2.3,4,2.1,27,48]
+        let arr2 = new Array("mani","alfa","beta","zxgh")
+        for(let i of arr){
+            console.log(i)
+        }
+        console.log(arr.sort())
+        console.log(arr2.sort())
+        console.log(arr[2])
+        console.log(arr)
+        console.log(arr.splice(0,0,10,20))
+        console.log(arr)
+
+
+        let str = "  usha sree   "
+        console.log(str.trim())
+        for(let j of str){
+            console.log(j)
+        }
+        console.log(document.URL)
+
+        document.title = "new one"
+
+
+
+
+
+        console.log(Math.round(4.0))
+        console.log(Math.floor(4.9))
+        console.log(Math.ceil(4.9))
+        console.log(Math.random())
+        console.log(Math.max(4.0,5,1.3))
+        console.log(Math.min(4.0,5,1.3))
+
+        let today = new Date(2023,3,23,12,54,10)
+        console.log(today)
+        console.log(today.getFullYear())
+        console.log(today.getMonth())
+         console.log(today.getDate())
+        console.log(today.getHours())
+        console.log(today.getMinutes())
+        console.log(today.getSeconds())
+        console.log(today.toString())
+
+
+
+
+
+        let pattern = /i/ig
+        let pattern2 = new RegExp("hello")
+        let text = "I hello I am"
+        console.log(pattern.exec(text))
+        console.log(text.replace(pattern,"hey"))
+
+
+        let pattern3 = /^[A-Za-z0-9._-]+@[a-z]+\.[a-z]{2,}/
+        let content = "ushasree@gmail.in"
+        console.log(pattern3.test(content))
+
+
+        let a = "12234.5a67adfg"
+        console.log(a)
+        console.log(typeof(a))
+        a=parseFloat(a)
+        console.log(a)
+        console.log(typeof(a))
+
+
+    </script>
+</body>
+</html>

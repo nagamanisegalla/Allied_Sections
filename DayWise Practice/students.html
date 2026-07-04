@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Students</title>
+<style>
+    body { 
+        font-family: Arial, sans-serif; 
+        margin: 0;
+     }
+    nav { 
+        background: #333; 
+        color: #fff; 
+        padding: 0.5rem;
+     }
+    .nav-list { 
+        list-style: none; 
+        margin: 0; 
+        padding: 0; 
+        display: flex; 
+        gap: 0.5rem; 
+    }
+    .nav-list a { 
+        color: #fff; 
+        text-decoration: none; 
+        padding: 0.5rem 0.75rem; 
+        display: block; 
+        border-radius: 4px; 
+    }
+    .nav-list a:hover, .nav-list a.active { 
+        background: #555;
+     }
+    .container {
+         padding: 1rem; 
+        }
+    .section { 
+        display: none; 
+    }
+    table { 
+        width: 100%; 
+        border-collapse: collapse; 
+        margin-top: 0.5rem;
+     }
+    th, td { 
+        border: 1px solid #ccc; 
+        padding: 8px; 
+        text-align: left; 
+    }
+    form label { 
+        display: block;
+         margin-top: 0.5rem; 
+        }
+    input, select, textarea, button {
+         margin-top: 0.25rem; 
+         padding: 8px; 
+         width: 100%; 
+         box-sizing: border-box;
+         }
+    button {
+         width: auto; 
+         cursor: pointer; 
+        }
+</style>
+</head>
+<body>
+    <nav>
+        <ul class="nav-list" role="menubar">
+            <li><a href="#" role="menuitem" data-target="tableSection">Table</a></li>
+            <li><a href="#" role="menuitem" data-target="formSection">Form</a></li>
+            <li><a href="#" role="menuitem" data-target="listSection">List</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section id="tableSection" class="section" aria-hidden="true">
+    <table>
+        <tr>
+            <th>name</th>
+            <th>roll</th>
+            <th>class</th>
+        </tr>
+        <tr>
+            <td rowspan="2">naga</td>
+            <td>01</td>
+            <td>abc</td>
+        </tr>
+        <tr>
+          
+            <td colspan="2">01</td>
+            <td>abc</td>
+        </tr>
+        <tr>
+            <td>naga</td>
+            <td>abc</td>
+        </tr>
+    </table>
+        </section>
+
+        <section id="formSection" class="section" aria-hidden="true">
+            <form>
+        <fieldset>
+            <legend>User Information</legend>
+        <label>UserName:</label>
+        <input type="text" name="name" placeholder="enter your fullname">
+        <br><br>
+        <label>Password</label>
+        <input type="password" >
+        <br><br>
+        <label>Email</label>
+        <input type="email" required name="email"> 
+        <br><br>
+        </fieldset>
+        <label>Age</label>
+        <input type="number" min="1" max="100">
+        <br><br>
+        <label>DOB</label>
+        <input type="date" >
+        <br><br>
+        <button type="submit">Submit</button>
+        <input type="submit">
+
+    </form>
+        </section>
+
+        <section id="listSection" class="section" aria-hidden="true">
+            <ul>
+                <li>student1</li>
+                <li>name2</li>
+                <li>name3</li>
+            </ul>
+        </section>
+    </main>
+
+    <script>
+        const links = document.querySelectorAll('nav a[data-target]');
+        const sections = document.querySelectorAll('.section');
+
+        function hideAll() {
+            sections.forEach(s => { s.style.display = 'none'; s.setAttribute('aria-hidden','true'); });
+            links.forEach(a => a.classList.remove('active'));
+        }
+
+        links.forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                const id = link.dataset.target;
+                const target = document.getElementById(id);
+                if (!target) return;
+                hideAll();
+                target.style.display = 'block';
+                target.setAttribute('aria-hidden','false');
+                link.classList.add('active');
+                target.focus && target.focus();
+            });
+        });
+        document.getElementById('studentForm').addEventListener('submit', e => {
+            e.preventDefault();
+            const name = e.target.name.value.trim();
+            const grade = e.target.grade.value;
+            if (!name) return;
+            const tbody = document.querySelector('#tableSection tbody');
+            const id = tbody.children.length + 1;
+            const tr = document.createElement('tr');
+            tr.innerHTML = `<td>${id}</td><td>${name}</td><td>${grade}</td>`;
+            tbody.appendChild(tr);
+            const ul = document.querySelector('#listSection ul');
+            const li = document.createElement('li');
+            li.textContent = `${name} — ${grade}`;
+            ul.appendChild(li);
+            e.target.reset();
+            document.querySelector('nav a[data-target="tableSection"]').click();
+        });
+    </script>
+</body>
+</html>

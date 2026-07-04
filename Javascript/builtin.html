@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Student(name,roll){
+            this.name = name
+            this.roll = roll
+        }
+        let s1 = new Student("harani",23)
+        let s2 = new Student("lakshmidhar",5)
+        //console.log(s1)
+
+
+        let arr = [6,65,5,1,2,3,4,12,45,92,1.7,132,140]
+        let arr2 = new Array("mani","mounika","saniya","alfa","beta")
+        for(let i=0;i<arr.length;i++){
+            console.log(arr[i])
+        }
+
+        for(let k of arr2){
+            console.log(k)
+        }
+     
+        /*console.log(arr2.length)
+        console.log(arr.length)
+        console.log(arr.indexOf(2))
+        console.log(arr)
+        console.log(arr.splice(0,0,10,20))
+        console.log(arr)*/
+
+
+        let str = "    lakshmi dhar    "
+        console.log(str[0])
+        console.log(str.trim())
+        for(let j of str){
+            console.log(j)
+        }
+
+        console.log(innerWidth)
+        console.log(document.URL)
+
+
+        console.log(Math.round(4.0))
+        console.log(Math.floor(4.4))
+        console.log(Math.ceil(4.0))
+        console.log(Math.random())
+        console.log(Math.max(4.6,2,1))
+        console.log(Math.min(4.6,2,1))
+
+        let today = new Date(2024,4,23,14,35,22)
+        console.log(today)
+        console.log(today.getDate())
+        console.log(today.getMonth())
+        console.log(today.getFullYear())
+        console.log(today.getHours())
+        console.log(today.getMinutes())
+        console.log(today.getSeconds())
+        console.log(today.toString())
+
+
+
+        let pattern = /^CSS/m       
+        let content = `HTML
+            CSS
+JS1`
+        console.log(pattern.test(content))
+        /*let pattern2 = new RegExp("m")
+        let text = "Hey, i am mani"
+        console.log(pattern2.exec(text))
+        console.log(text.replace(pattern,"m"))
+        console.log(pattern.test(text))*/
+
+        let text = "mani2004@gmail.in"
+        let text2 = "lorem cant do bjhnmhvjdlg fgshdrjt fgdh"
+        let pattern5 = /^[A-Za-z0-9]+@[A-Za-z]+\.[a-z]{2,}$/
+        let pattern6 = /^[A-Za-z\s]+$/
+        console.log(pattern6.test(text2))
+    </script>
+
+</body>
+</html>

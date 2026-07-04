@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exam Result Checker</title>
+</head>
+<body>
+
+<button onclick="examresult()">Check Exam Result</button>
+
+<script>
+function examresult() {
+
+    var name = prompt("Enter student name");
+
+    if (name === "" || name === null) {
+        alert("Name is required");
+    } 
+    else {
+
+        var marks = Number(prompt("Enter marks (0 to 100)"));
+
+        if (isNaN(marks)) {
+            alert("Please enter only numbers for marks");
+        }
+        else if (marks < 0 || marks > 100) {
+            alert("Invalid marks");
+        }
+        else if (marks < 35) {
+            alert(name + " is Failed");
+        }
+        else {
+            alert(name + " is Passed");
+
+            if (marks >= 75) {
+                alert("Grade: A");
+            }
+            else if (marks >= 60) {
+                alert("Grade: B");
+            }
+            else {
+                alert("Grade: C");
+            }
+        }
+    }
+}
+</script>
+
+</body>
+</html>

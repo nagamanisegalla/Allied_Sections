@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Control flow statements</h2>
+    <script>
+        let weather = "sunny"
+        if(weather=="rainy"){
+            console.log("take umbrella")
+        }
+        else if(weather=="sunny"){
+        console.log("take umbrella it is sunny")
+        }
+        else{
+        console.log("Don't take")
+        }
+
+        let a = 10
+        let b = 20
+        if(a>10){
+            console.log("true")
+            if(b==20){
+                console.log("inside if")
+            }
+            else{
+                console.log("false2")
+            }
+        }
+        else{
+            console.log("false")
+        }
+
+        let day = 4
+        switch(day){
+            case 1: console.log("mon")
+                break
+            case 2: console.log("tue")
+            case 3: console.log("wed")
+            case 4: console.log("thur")
+                     break
+            case 5: console.log("fri")
+            case 6: console.log("sat")
+            case 7: console.log("sun")
+            default: console.log("nothing matched")
+        }
+    </script>
+</body>
+</html>

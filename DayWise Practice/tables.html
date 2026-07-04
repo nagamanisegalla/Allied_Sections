@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,tr,td,th{
+            border:2px solid blue ;
+            border-collapse: collapse;
+        }
+        th{
+            padding: 10px;
+        }
+        table{
+            height: 170px;
+            width: 150px;
+            margin: 70px;
+        }
+        td{
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Student Details</caption>
+        <tr>
+            <th colspan="2">Name</th>
+            <th>Branch</th>
+        </tr>
+        <tr>
+            <td>Chinna</td>
+            <td>1</td>
+            <td rowspan="2" style="writing-mode: vertical-lr; text-orientation:up">ABC</td>
+        </tr>
+        <tr>
+            <td>Kumar</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>Bhargavi</td>
+            <td>3</td>
+            <td>KLM</td>
+        </tr>
+    </table>
+</body>
+</html>

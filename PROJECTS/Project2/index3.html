@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Eligibility & Course Checker</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+
+        .box {
+            width: 320px;
+            margin: 120px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px gray;
+        }
+
+        button {
+            padding: 12px 15px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h2>Eligibility Checker</h2>
+
+    <button
+        onclick="
+            var name = prompt('Enter your name');
+            var age = prompt('Enter your age');
+
+            if (age >= 18) {
+
+                var course = prompt('Enter course: HTML / CSS / JavaScript');
+
+                if (course == 'HTML') {
+                    this.innerText = name + ' | Eligible | HTML | Fee ₹3000';
+                } 
+                else if (course == 'CSS') {
+                    this.innerText = name + ' | Eligible | CSS | Fee ₹4000';
+                } 
+                else if (course == 'JavaScript') {
+                    this.innerText = name + ' | Eligible | JavaScript | Fee ₹5000';
+                } 
+                else {
+                    alert('Invalid course selected');
+                }
+
+            } else {
+                alert(name + ' is Not Eligible');
+            }
+        "
+    >
+        Check Eligibility
+    </button>
+</div>
+
+</body>
+</html>
